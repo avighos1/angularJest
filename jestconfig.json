@@ -1,0 +1,32 @@
+{
+  "preset": "jest-preset-angular",
+  "setupFilesAfterEnv": [
+    "<rootDir>/setup-jest.ts"
+  ],
+  "transform": {
+    "^.+\\.(ts|js|html)$": "jest-preset-angular"
+  },
+  "testMatch": [
+    "**/?(*.)+(jest).ts"
+  ],
+  "transformIgnorePatterns": [
+    "node_modules/(?!.*\\.mjs$)"
+  ],
+  "testEnvironment": "jsdom",
+  "collectCoverage": true,
+  "coverageThreshold": {
+    "global":{
+      "branches":95,
+      "functions": 100,
+      "lines": 100
+    },
+    "./src/sign-up/sign-up.component.jest.ts":{
+      "branches":95,
+      "functions": 100,
+      "lines": 100
+    }
+  },
+  "coverageReporters": ["lcov"],
+  "coverageDirectory": "./output/code-coverage/",
+  "reporters": ["./node_modules/jest-html-reporter"]
+}
